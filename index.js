@@ -1,19 +1,16 @@
 let currentlyPicked = null;
 
 const draggableItems = document.getElementsByClassName('listItem');
-const dropZones = document.getElementsByClassName('listContainer');
 for(let i = 0; i < draggableItems.length; ++i){
     draggableItems[i].addEventListener('drag', ()=>{
     });
     draggableItems[i].addEventListener('dragstart', (event)=>{
         currentlyPicked = event.target;
     })
-}
-for(let j = 0; j < draggableItems.length; ++j){
-    dropZones[j].addEventListener('dragover', (event)=>{
+    draggableItems[i].addEventListener('dragover', (event)=>{
         event.preventDefault();
     })
-    dropZones[j].addEventListener('drop', (event)=>{
+    draggableItems[i].addEventListener('drop', (event)=>{
         event.preventDefault();
         if(event.target.className === 'listItem'){
             let temp1 = currentlyPicked.parentNode;
