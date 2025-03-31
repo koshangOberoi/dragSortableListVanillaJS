@@ -1,0 +1,26 @@
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.listContainer{
+    list-style-type: none;
+}
+
+.listItem{
+    height: 18px;
+    width: 180px;
+    background: #cfcfcf;
+    margin: 5px;
+    padding: 20px;
+}
+
+.listItem:hover{
+    cursor: move;
+}
+
+.dragBar{
+    float: right;
+}
